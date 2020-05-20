@@ -1,0 +1,35 @@
+
+
+#Comando para GIT
+
+
+## Actualizar un proyecto "forkeado" en Github
+
+Cuando realizamos el fork de un proyecto en Github para realizar algún cambio al proyecto y realizar un Pull Request con nuestras modificaciones suele pasar que el proyecto del que realizamos el fork ya fue actualizado muchas veces y nuestros cambios podrían entrar en conflicto. Para evitar esto es conveniente realizar la actualización de nuestro repositorio forkeado, para lo cuál podemos hacer lo siguiente:
+
+Una vez realizado el fork del proyecto, lo que normalmente hacemos es clonar nuestro proyecto:
+
+git clone https://github.com/username/proyecto.git
+cd proyecto
+Lo que tenemos que hacer después es agregar el repositorio padre como un origen remoto.
+
+git remote add upstream https://github.com/original/proyecto.git
+git fetch upstream
+Con el último comando lo que hicimos fue hacer un Pull a los cambios que hay en el repositorio original pero sin mezclarlo en nuestra repositorio.
+
+Si queremos actualizar nuestro repositorio con los cambios del repositorio padre utilizamos los siguientes comandos:
+
+git fetch upstream
+git merge upstream/master
+
+
+
+#Crear una nueva rama local y remot
+
+git branch experimental
+
+
+############## LINK ###############
+https://desarrolloweb.com/manuales/manual-de-git.html
+
+https://david-estevez.gitbooks.io/the-git-the-bad-and-the-ugly/content/es/subir-y-bajar-cambios-a-un-repositorio-remoto.html
