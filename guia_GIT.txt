@@ -29,6 +29,12 @@ git merge upstream/master
 git branch experimental
 
 
+######### Para subir al remoto propio
+
+git add .
+git commit -m " MENSAJE "
+git push origin master
+
 ############## LINK ###############
 https://desarrolloweb.com/manuales/manual-de-git.html
 
