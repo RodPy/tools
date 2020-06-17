@@ -15,14 +15,14 @@ echo "Descarga lista de repositorios "
 
  sudo wget http://repo.mosquitto.org/debian/mosquitto-buster.list 
 
- sudo -i 
-
- apt-get update -y
+ 
+echo "Actualizar Repo "
+sudo apt-get update -y
 
 echo "Instalar mosquitto"
 
-apt-get install mosquitto
+sudo apt-get install mosquitto -y
 
 echo "Intalar clientes"
 
-apt-get install mosquitto-clients -y
+sudo apt-get install mosquitto-clients -y
